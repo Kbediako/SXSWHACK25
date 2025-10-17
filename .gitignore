@@ -1,0 +1,27 @@
+# Node & tooling
+node_modules/
+npm-debug.log*
+yarn-error.log
+pnpm-lock.yaml
+
+# Environment files
+.env
+.env.*
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Local exports & temp outputs (kept out of git; .runs remains tracked)
+tmp/
+exports/
+.cache/
+
+# Logs
+*.log
+!/.runs/**/*.log
+
+# Coverage & build
+coverage/
+dist/
+build/
