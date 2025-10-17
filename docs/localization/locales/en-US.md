@@ -1,6 +1,6 @@
 # Localization Brief — American English (en-US)
 
-Last generated: 2025-10-17T03:43:03.415Z
+Last generated: 2025-10-17T05:02:44.741Z
 ## Cultural Insights
 
 - Highlight inclusive, plain-language messaging that resonates with broad U.S. audiences and avoids idioms that may alienate international readers.

@@ -1,6 +1,6 @@
 # Localization Brief — Japanese (ja)
 
-Last generated: 2025-10-17T03:22:02.676Z
+Last generated: 2025-10-17T05:02:44.742Z
 ## Cultural Insights
 
 - Demonstrate respect for consensus-driven decision making—acknowledge how StitchFlow supports internal approvals and ringi processes.

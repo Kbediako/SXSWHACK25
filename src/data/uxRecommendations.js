@@ -1,0 +1,45 @@
+export const uxRecommendationCatalog = {
+  'en-GB': [
+    {
+      id: 'metric-units',
+      selector: '.metric-card strong',
+      recommendation:
+        'Show metric conversions alongside percentage deltas (e.g., “↓ 48% (11 days faster on average)”).',
+      rationale:
+        'Provides concrete delivery impact and supports procurement expectations for quantified benefits.',
+      accessibilityImpact: 'Improves comprehension for decision-makers comparing delivery timelines.',
+      requiresHumanReview: false,
+    },
+    {
+      id: 'cta-spacing',
+      selector: 'section[aria-labelledby=\"cta\"] .cta',
+      recommendation:
+        'Increase top padding to 56px to separate CTA from ordered list when viewed on tablet breakpoints.',
+      rationale:
+        'Reduces cognitive load and prevents CTA from feeling visually merged with preceding list content.',
+      accessibilityImpact: 'Enhances focus order clarity for keyboard navigation.',
+      requiresHumanReview: false,
+    },
+  ],
+  ja: [
+    {
+      id: 'typography-line-height',
+      selector: 'body',
+      recommendation: 'Increase base line-height to 1.7 when rendering Japanese copy.',
+      rationale:
+        'Japanese scripts benefit from additional vertical rhythm to maintain readability at paragraph scale.',
+      accessibilityImpact: 'Supports WCAG 1.4.8 for readability in multi-script layouts.',
+      requiresHumanReview: false,
+    },
+    {
+      id: 'font-stack',
+      selector: 'body',
+      recommendation:
+        'Inject locale-aware font stack: \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", system sans-serif.',
+      rationale:
+        'Ensures glyph coverage for kana/kanji and aligns with expectations for enterprise UI typography.',
+      accessibilityImpact: 'Prevents fallback to serif fonts that can hinder legibility.',
+      requiresHumanReview: true,
+    },
+  ],
+};

@@ -1,0 +1,57 @@
+export const mediaRecommendationCatalog = {
+  'en-GB': [
+    {
+      id: 'hero-imagery',
+      slot: 'hero',
+      action: 'swap_image',
+      assetSuggestion: 'assets/en-GB/hero-team-collaboration.jpg',
+      altText:
+        'Product marketing and localisation managers reviewing content in a London meeting space.',
+      rationale:
+        'Showcases an EMEA team in a London setting to reinforce regional relevance and inclusivity.',
+      requiresHumanReview: true,
+      notes: [
+        'Source imagery with visible accessibility accommodations (step-free space) per Equality Act guidance.',
+      ],
+    },
+    {
+      id: 'metrics-overlay',
+      slot: 'metrics',
+      action: 'adjust_graphics',
+      assetSuggestion: 'assets/en-GB/metrics-overlay.svg',
+      altText:
+        'Icons highlighting faster delivery programmes and governance confidence for UK stakeholders.',
+      rationale:
+        'Reinforces programme governance benefits surfaced in the UK locale brief and supports ESG messaging.',
+      requiresHumanReview: false,
+      notes: [
+        'Overlay copy should use “programme” and “per cent” to reflect GOV.UK style conventions.',
+      ],
+    },
+  ],
+  ja: [
+    {
+      id: 'hero-imagery',
+      slot: 'hero',
+      action: 'swap_image',
+      assetSuggestion: 'assets/ja/hero-enterprise-team.jpg',
+      altText:
+        '日本のエンタープライズチームがローカライズされたキャンバスをレビューしている様子。',
+      rationale:
+        'Depicts a Japanese enterprise workspace to build trust and highlight local support availability.',
+      requiresHumanReview: true,
+      notes: ['Confirm photography usage rights for the Japanese market.'],
+    },
+    {
+      id: 'compliance-badge',
+      slot: 'footer',
+      action: 'add_badge',
+      assetSuggestion: 'assets/ja/appi-compliance-badge.svg',
+      altText: 'APPI準拠を示すバッジ。',
+      rationale:
+        'Surfaces APPI compliance reassurance in the footer to address regulatory expectations identified in the brief.',
+      requiresHumanReview: false,
+      notes: ['Coordinate with legal for final badge copy before launch.'],
+    },
+  ],
+};

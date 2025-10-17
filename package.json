@@ -8,9 +8,13 @@
   "scripts": {
     "lint": "bash scripts/spec-guard.sh --dry-run || true",
     "eval:test": "node -e \"console.log('eval:test placeholder: add evaluation harness once defined')\"",
-    "phase0": "node src/run-phase0.js"
+    "phase0": "node src/run-phase0.js",
+    "phase1": "node src/run-phase1.js"
   },
   "dependencies": {
+    "ffmpeg-static": "^5.1.0",
+    "cheerio": "^1.0.0",
+    "js-yaml": "^4.1.0",
     "playwright": "^1.48.0"
   }
 }

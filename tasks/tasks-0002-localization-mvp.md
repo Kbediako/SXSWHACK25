@@ -3,9 +3,9 @@
 ## Checklist
 - [x] Capture ingestion baseline for reference page (`docs/localization/sample-page.html`) and store manifest/logs under `.runs/0002/2025-10-17T03-41-42-995Z/ingestion/` (Evidence: `.runs/0002/2025-10-17T03-41-42-995Z/ingestion/manifest.json`, `.runs/0002/2025-10-17T03-41-42-995Z/ingestion/base.png`).
 - [x] Produce locale research brief templates and run at least one recorded agent session per locale (Evidence: `docs/localization/locales/{en-US,en-GB,ja}.md`, `.runs/0002/2025-10-17T03-41-42-995Z/agents/research.log`).
-- [ ] Implement copy adaptation agent with regression harness comparing seed locales (Evidence: `.runs/0002/<timestamp>/agents/copy.json`, `.runs/0002/<timestamp>/regression/copy-diff.log`).
-- [ ] Ship media/UX agent recommendations with reviewer workflow in canvas (Evidence: `.runs/0002/<timestamp>/agents/{media.json,ux.json}`, `tmp/previews/localization-mvp/<timestamp>/canvas-review.mp4`).
-- [ ] Persist change log decisions with audit metadata and surface in UI (Evidence: `tmp/localization-mvp/<run-id>/changelog.yaml`, `.runs/0002/<timestamp>/ui/changelog-verification.log`).
+- [x] Implement copy adaptation agent with regression harness comparing seed locales (Evidence: `.runs/0002/2025-10-17T04-58-30-153Z/agents/copy.json`, `.runs/0002/2025-10-17T04-58-30-153Z/regression/copy-diff.log`).
+- [x] Ship media/UX agent recommendations with reviewer workflow in canvas (Evidence: `.runs/0002/2025-10-17T04-58-30-153Z/agents/media.json`, `.runs/0002/2025-10-17T04-58-30-153Z/agents/ux.json`, `tmp/previews/localization-mvp/2025-10-17T04-58-30-153Z/canvas-review.mp4`).
+- [x] Persist change log decisions with audit metadata and surface in UI (Evidence: `tmp/localization-mvp/2025-10-17T04-58-30-153Z/changelog.yaml`, `.runs/0002/2025-10-17T04-58-30-153Z/ui/changelog-verification.log`, `.runs/0002/2025-10-17T04-58-30-153Z/run.json`).
 - [ ] Deliver Stitch export bundle with manifest and rationale notes (Evidence: `exports/localization-mvp/<timestamp>/localized-page.zip`, `exports/localization-mvp/<timestamp>/manifest.json`).
 - [ ] Document compliance + retention posture for localisation runs (Evidence: `docs/localization/compliance.md`, `.runs/0002/<timestamp>/agents/compliance-check.log`).
 - [ ] Execute guardrail suite post-implementation and archive outputs (Evidence: `.runs/0002/<timestamp>/guardrails/spec-guard.log`, `.runs/0002/<timestamp>/guardrails/lint.log`, `.runs/0002/<timestamp>/guardrails/eval-test.log`).
