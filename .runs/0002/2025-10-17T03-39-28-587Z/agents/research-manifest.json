@@ -1,0 +1,11 @@
+{
+  "taskId": "0002",
+  "phase": "phase-0",
+  "recordedAt": "2025-10-17T03:39:30.660Z",
+  "locales": [
+    {
+      "locale": "en-US",
+      "path": "docs/localization/locales/en-US.md"
+    }
+  ]
+}

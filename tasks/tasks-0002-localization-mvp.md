@@ -1,8 +1,8 @@
 # Task List — Localization Orchestrator MVP (0002)
 
 ## Checklist
-- [ ] Capture ingestion baseline for reference page (`docs/localization/sample-page.html`) and store manifest/logs under `.runs/0002/<timestamp>/ingestion/` (Evidence: `.runs/0002/<timestamp>/ingestion/manifest.json`, `.runs/0002/<timestamp>/ingestion/base.png`).
-- [ ] Produce locale research brief templates and run at least one recorded agent session per locale (Evidence: `docs/localization/locales/{en-US,en-GB,ja}.md`, `.runs/0002/<timestamp>/agents/research.log`).
+- [x] Capture ingestion baseline for reference page (`docs/localization/sample-page.html`) and store manifest/logs under `.runs/0002/2025-10-17T03-41-42-995Z/ingestion/` (Evidence: `.runs/0002/2025-10-17T03-41-42-995Z/ingestion/manifest.json`, `.runs/0002/2025-10-17T03-41-42-995Z/ingestion/base.png`).
+- [x] Produce locale research brief templates and run at least one recorded agent session per locale (Evidence: `docs/localization/locales/{en-US,en-GB,ja}.md`, `.runs/0002/2025-10-17T03-41-42-995Z/agents/research.log`).
 - [ ] Implement copy adaptation agent with regression harness comparing seed locales (Evidence: `.runs/0002/<timestamp>/agents/copy.json`, `.runs/0002/<timestamp>/regression/copy-diff.log`).
 - [ ] Ship media/UX agent recommendations with reviewer workflow in canvas (Evidence: `.runs/0002/<timestamp>/agents/{media.json,ux.json}`, `tmp/previews/localization-mvp/<timestamp>/canvas-review.mp4`).
 - [ ] Persist change log decisions with audit metadata and surface in UI (Evidence: `tmp/localization-mvp/<run-id>/changelog.yaml`, `.runs/0002/<timestamp>/ui/changelog-verification.log`).

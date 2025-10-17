@@ -1,0 +1,25 @@
+{
+  "taskId": "0002",
+  "phase": "phase-0",
+  "recordedAt": "2025-10-17T03:39:30.661Z",
+  "runRoot": ".runs/0002/2025-10-17T03-39-28-587Z",
+  "ingestion": {
+    "manifest": ".runs/0002/2025-10-17T03-39-28-587Z/ingestion/manifest.json",
+    "screenshot": ".runs/0002/2025-10-17T03-39-28-587Z/ingestion/base.png",
+    "domSnapshot": ".runs/0002/2025-10-17T03-39-28-587Z/ingestion/dom.html"
+  },
+  "research": {
+    "manifest": ".runs/0002/2025-10-17T03-39-28-587Z/agents/research-manifest.json",
+    "log": ".runs/0002/2025-10-17T03-39-28-587Z/agents/research.log",
+    "locales": [
+      {
+        "locale": "en-US",
+        "path": "docs/localization/locales/en-US.md"
+      }
+    ]
+  },
+  "notes": [
+    "Phase 0 skeleton ensures ingestion + research agents run end-to-end.",
+    "Outputs are stored under .runs/0002/<timestamp>/ for downstream guardrails."
+  ]
+}

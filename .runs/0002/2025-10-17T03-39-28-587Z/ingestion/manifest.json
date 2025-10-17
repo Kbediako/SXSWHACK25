@@ -1,0 +1,55 @@
+{
+  "taskId": "0002",
+  "phase": "phase-0",
+  "recordedAt": "2025-10-17T03:39:30.637Z",
+  "source": {
+    "path": "docs/localization/sample-page.html",
+    "url": "file:///Users/asabeko/Documents/Code/SXSWHACK25/docs/localization/sample-page.html",
+    "status": 200
+  },
+  "output": {
+    "manifest": ".runs/0002/2025-10-17T03-39-28-587Z/ingestion/manifest.json",
+    "screenshot": ".runs/0002/2025-10-17T03-39-28-587Z/ingestion/base.png",
+    "domSnapshot": ".runs/0002/2025-10-17T03-39-28-587Z/ingestion/dom.html"
+  },
+  "browser": {
+    "name": "chromium",
+    "version": "141.0.7390.37",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    }
+  },
+  "digest": {
+    "algorithm": "sha256",
+    "value": "72e8e8e8be5b279dfc11d28320402ff2bf320c16a251a063ef28137007b6dcd1"
+  },
+  "title": "StitchFlow Localization – Sample Landing Page",
+  "network": [
+    {
+      "type": "finished",
+      "url": "file:///Users/asabeko/Documents/Code/SXSWHACK25/docs/localization/sample-page.html",
+      "method": "GET",
+      "resourceType": "document",
+      "status": 200
+    },
+    {
+      "type": "finished",
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "status": 200
+    },
+    {
+      "type": "finished",
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "method": "GET",
+      "resourceType": "font",
+      "status": 200
+    }
+  ],
+  "notes": [
+    "Ingestion executed in headless Chromium with automation evasion headers.",
+    "DOM snapshot stored as UTF-8 HTML for downstream diffing."
+  ]
+}
