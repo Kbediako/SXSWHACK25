@@ -1,0 +1,142 @@
+{
+  "taskId": "0002",
+  "phase": "phase-2",
+  "recordedAt": "2025-10-17T05:45:23.050Z",
+  "runRoot": ".runs/0002/2025-10-17T05-31-40-127Z",
+  "ingestion": {
+    "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/ingestion/manifest.json",
+    "screenshot": ".runs/0002/2025-10-17T05-31-40-127Z/ingestion/base.png"
+  },
+  "agents": {
+    "research": {
+      "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/agents/research-manifest.json",
+      "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/research.log"
+    },
+    "copy": {
+      "output": ".runs/0002/2025-10-17T05-31-40-127Z/agents/copy.json",
+      "evaluationLog": ".runs/0002/2025-10-17T05-31-40-127Z/agents/copy-eval.log",
+      "regressionLog": ".runs/0002/2025-10-17T05-31-40-127Z/regression/copy-diff.log",
+      "summary": {
+        "totals": {
+          "total": 15,
+          "changed": 10,
+          "requiresReview": 0
+        },
+        "locales": [
+          {
+            "locale": "en-US",
+            "totals": {
+              "total": 5,
+              "changed": 0,
+              "unchanged": 5,
+              "requiresHumanReview": 0
+            }
+          },
+          {
+            "locale": "en-GB",
+            "totals": {
+              "total": 5,
+              "changed": 5,
+              "unchanged": 0,
+              "requiresHumanReview": 0
+            }
+          },
+          {
+            "locale": "ja",
+            "totals": {
+              "total": 5,
+              "changed": 5,
+              "unchanged": 0,
+              "requiresHumanReview": 0
+            }
+          }
+        ]
+      }
+    },
+    "media": {
+      "output": ".runs/0002/2025-10-17T05-31-40-127Z/agents/media.json",
+      "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/media.log",
+      "summary": {
+        "totals": {
+          "total": 4,
+          "requiresReview": 0
+        },
+        "locales": [
+          {
+            "locale": "en-GB",
+            "totals": {
+              "total": 2,
+              "requiresHumanReview": 0
+            }
+          },
+          {
+            "locale": "ja",
+            "totals": {
+              "total": 2,
+              "requiresHumanReview": 0
+            }
+          }
+        ]
+      }
+    },
+    "ux": {
+      "output": ".runs/0002/2025-10-17T05-31-40-127Z/agents/ux.json",
+      "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/ux.log",
+      "summary": {
+        "totals": {
+          "total": 4,
+          "requiresReview": 0
+        },
+        "locales": [
+          {
+            "locale": "en-GB",
+            "totals": {
+              "total": 2,
+              "requiresHumanReview": 0
+            }
+          },
+          {
+            "locale": "ja",
+            "totals": {
+              "total": 2,
+              "requiresHumanReview": 0
+            }
+          }
+        ]
+      }
+    }
+  },
+  "changelog": {
+    "yaml": "tmp/localization-mvp/2025-10-17T05-31-40-127Z/changelog.yaml",
+    "uiLog": ".runs/0002/2025-10-17T05-31-40-127Z/ui/changelog-verification.log"
+  },
+  "preview": {
+    "video": "tmp/previews/localization-mvp/2025-10-17T05-31-40-127Z/canvas-review.mp4",
+    "metadata": "tmp/previews/localization-mvp/2025-10-17T05-31-40-127Z/metadata.json"
+  },
+  "exportBundle": {
+    "bundle": "exports/localization-mvp/2025-10-17T05-31-40-127Z/localized-page.zip",
+    "manifest": "exports/localization-mvp/2025-10-17T05-31-40-127Z/manifest.json",
+    "rationale": "exports/localization-mvp/2025-10-17T05-31-40-127Z/rationale.md"
+  },
+  "compliance": {
+    "doc": "docs/localization/compliance.md",
+    "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/compliance-check.log"
+  },
+  "guardrails": {
+    "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/manifest.json",
+    "logs": {
+      "specGuard": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/spec-guard.log",
+      "lint": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/lint.log",
+      "evalTest": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/eval-test.log"
+    }
+  },
+  "approval": {
+    "doc": "docs/localization/approvals/2025-10-17T05-31-40-127Z.md",
+    "partner": "Northstar Design Collective"
+  },
+  "notes": [
+    "Phase 2 bundles Stitch export artifacts, compliance documentation, guardrail outputs, and design partner approval.",
+    "All localization recommendations cleared; follow compliance and legal trackers ahead of GA."
+  ]
+}

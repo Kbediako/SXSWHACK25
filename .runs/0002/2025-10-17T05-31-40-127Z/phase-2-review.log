@@ -1,0 +1,5 @@
+[INFO] 2025-10-17T05:45:23.050Z :: phase-2 manifest=.runs/0002/2025-10-17T05-31-40-127Z/phase-2-manifest.json
+[INFO] 2025-10-17T05:45:23.050Z :: export_bundle=exports/localization-mvp/2025-10-17T05-31-40-127Z/localized-page.zip
+[INFO] 2025-10-17T05:45:23.050Z :: guardrails spec=.runs/0002/2025-10-17T05-31-40-127Z/guardrails/spec-guard.log lint=.runs/0002/2025-10-17T05-31-40-127Z/guardrails/lint.log eval=.runs/0002/2025-10-17T05-31-40-127Z/guardrails/eval-test.log
+[INFO] 2025-10-17T05:45:23.050Z :: compliance_doc=docs/localization/compliance.md
+[INFO] 2025-10-17T05:45:23.050Z :: approval_doc=docs/localization/approvals/2025-10-17T05-31-40-127Z.md partner=Northstar Design Collective

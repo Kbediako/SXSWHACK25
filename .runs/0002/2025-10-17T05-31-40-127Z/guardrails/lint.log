@@ -1,0 +1,10 @@
+[COMMAND] 2025-10-17T05:31:42.664Z :: npm run lint
+[EXIT] 2025-10-17T05:31:42.757Z :: code=0
+--- stdout ---
+
+> sxswhack25@0.1.0 lint
+> bash scripts/spec-guard.sh --dry-run || true
+
+spec-guard: checks passed
+--- stderr ---
+(empty)

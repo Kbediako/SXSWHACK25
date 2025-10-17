@@ -1,0 +1,6 @@
+[COMMAND] 2025-10-17T05:31:42.619Z :: bash scripts/spec-guard.sh --dry-run
+[EXIT] 2025-10-17T05:31:42.664Z :: code=0
+--- stdout ---
+spec-guard: checks passed
+--- stderr ---
+(empty)

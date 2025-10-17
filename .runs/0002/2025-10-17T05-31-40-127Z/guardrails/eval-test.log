@@ -1,0 +1,10 @@
+[COMMAND] 2025-10-17T05:31:42.757Z :: npm run eval:test
+[EXIT] 2025-10-17T05:31:42.842Z :: code=0
+--- stdout ---
+
+> sxswhack25@0.1.0 eval:test
+> node -e "console.log('eval:test placeholder: add evaluation harness once defined')"
+
+eval:test placeholder: add evaluation harness once defined
+--- stderr ---
+(empty)

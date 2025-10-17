@@ -1,0 +1,17 @@
+{
+  "taskId": "0002",
+  "runId": "2025-10-17T05-31-40-127Z",
+  "recordedAt": "2025-10-17T05:45:23.050Z",
+  "doc": "docs/localization/compliance.md",
+  "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/compliance-check.log",
+  "locales": [
+    "en-US",
+    "en-GB",
+    "ja"
+  ],
+  "pendingReviews": {
+    "copy": 0,
+    "media": 0,
+    "ux": 0
+  }
+}

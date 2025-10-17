@@ -1,6 +1,6 @@
 # Localization Brief — United Kingdom English (en-GB)
 
-Last generated: 2025-10-17T05:02:44.742Z
+Last generated: 2025-10-17T05:31:41.969Z
 ## Cultural Insights
 
 - Emphasise outcomes for distributed teams and acknowledge procurement governance common in the UK public and enterprise sectors.

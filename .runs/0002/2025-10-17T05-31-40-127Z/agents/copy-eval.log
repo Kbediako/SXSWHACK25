@@ -1,0 +1,20 @@
+[INFO] 2025-10-17T05:31:41.974Z :: baseline verified for item=hero-headline selector=header h1
+[INFO] 2025-10-17T05:31:41.974Z :: baseline verified for item=hero-subhead selector=header p
+[INFO] 2025-10-17T05:31:41.974Z :: baseline verified for item=ops-paragraph selector=section[aria-labelledby="ops"] p
+[INFO] 2025-10-17T05:31:41.974Z :: baseline verified for item=cta-paragraph selector=section[aria-labelledby="cta"] p
+[INFO] 2025-10-17T05:31:41.974Z :: baseline verified for item=cta-button selector=section[aria-labelledby="cta"] button
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-US item=hero-headline diff=unchanged requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-US item=hero-subhead diff=unchanged requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-US item=ops-paragraph diff=unchanged requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-US item=cta-paragraph diff=unchanged requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-US item=cta-button diff=unchanged requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-GB item=hero-headline diff=changed requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-GB item=hero-subhead diff=changed requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-GB item=ops-paragraph diff=changed requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-GB item=cta-paragraph diff=changed requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=en-GB item=cta-button diff=changed requires_human_review=false
+[INFO] 2025-10-17T05:31:41.974Z :: locale=ja item=hero-headline diff=changed requires_human_review=true
+[INFO] 2025-10-17T05:31:41.974Z :: locale=ja item=hero-subhead diff=changed requires_human_review=true
+[INFO] 2025-10-17T05:31:41.974Z :: locale=ja item=ops-paragraph diff=changed requires_human_review=true
+[INFO] 2025-10-17T05:31:41.974Z :: locale=ja item=cta-paragraph diff=changed requires_human_review=true
+[INFO] 2025-10-17T05:31:41.974Z :: locale=ja item=cta-button diff=changed requires_human_review=true

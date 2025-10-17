@@ -1,0 +1,16 @@
+[HEADER] 2025-10-17T05:31:41.975Z :: task=0002 baseline=en-US locales=en-US, en-GB, ja
+[BASELINE] 2025-10-17T05:31:41.975Z :: locale=en-US item=hero-headline diff=unchanged recommended=retain-baseline
+[BASELINE] 2025-10-17T05:31:41.975Z :: locale=en-US item=hero-subhead diff=unchanged recommended=retain-baseline
+[BASELINE] 2025-10-17T05:31:41.975Z :: locale=en-US item=ops-paragraph diff=unchanged recommended=retain-baseline
+[BASELINE] 2025-10-17T05:31:41.975Z :: locale=en-US item=cta-paragraph diff=unchanged recommended=retain-baseline
+[BASELINE] 2025-10-17T05:31:41.975Z :: locale=en-US item=cta-button diff=unchanged recommended=retain-baseline
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=en-GB item=hero-headline diff=changed recommended=apply
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=en-GB item=hero-subhead diff=changed recommended=apply
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=en-GB item=ops-paragraph diff=changed recommended=apply
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=en-GB item=cta-paragraph diff=changed recommended=apply
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=en-GB item=cta-button diff=changed recommended=apply
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=ja item=hero-headline diff=changed recommended=review-and-approve
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=ja item=hero-subhead diff=changed recommended=review-and-approve
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=ja item=ops-paragraph diff=changed recommended=review-and-approve
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=ja item=cta-paragraph diff=changed recommended=review-and-approve
+[DIFF] 2025-10-17T05:31:41.975Z :: locale=ja item=cta-button diff=changed recommended=review-and-approve

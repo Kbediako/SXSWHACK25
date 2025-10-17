@@ -1,0 +1,275 @@
+{
+  "taskId": "0002",
+  "runId": "2025-10-17T05-31-40-127Z",
+  "phase": "phase-2",
+  "recordedAt": "2025-10-17T05:45:23.050Z",
+  "baselineLocale": "en-US",
+  "locales": [
+    "en-US",
+    "en-GB",
+    "ja"
+  ],
+  "reviewer": {
+    "id": "rev-internal",
+    "name": "Internal Localisation QA"
+  },
+  "source": {
+    "path": "docs/localization/sample-page.html"
+  },
+  "agents": [
+    {
+      "name": "ingestion",
+      "kind": "capture",
+      "implementation": "playwright-chromium",
+      "version": "141.0.7390.37",
+      "outputs": {
+        "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/ingestion/manifest.json",
+        "screenshot": ".runs/0002/2025-10-17T05-31-40-127Z/ingestion/base.png",
+        "domSnapshot": ".runs/0002/2025-10-17T05-31-40-127Z/ingestion/dom.html"
+      }
+    },
+    {
+      "name": "research",
+      "kind": "locale-brief",
+      "implementation": "template-static",
+      "version": "locale-briefs/v1",
+      "outputs": {
+        "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/agents/research-manifest.json",
+        "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/research.log"
+      }
+    },
+    {
+      "name": "copy",
+      "kind": "adaptation",
+      "implementation": "template-static",
+      "version": "copy-adapt/v1",
+      "outputs": {
+        "json": ".runs/0002/2025-10-17T05-31-40-127Z/agents/copy.json",
+        "evaluationLog": ".runs/0002/2025-10-17T05-31-40-127Z/agents/copy-eval.log",
+        "regressionLog": ".runs/0002/2025-10-17T05-31-40-127Z/regression/copy-diff.log"
+      }
+    },
+    {
+      "name": "media",
+      "kind": "recommendation",
+      "implementation": "template-static",
+      "version": "media-rec/v1",
+      "outputs": {
+        "json": ".runs/0002/2025-10-17T05-31-40-127Z/agents/media.json",
+        "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/media.log"
+      }
+    },
+    {
+      "name": "ux",
+      "kind": "recommendation",
+      "implementation": "template-static",
+      "version": "ux-rec/v1",
+      "outputs": {
+        "json": ".runs/0002/2025-10-17T05-31-40-127Z/agents/ux.json",
+        "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/ux.log"
+      }
+    },
+    {
+      "name": "export",
+      "kind": "stitch-bundle",
+      "implementation": "archiver-zip/v1",
+      "outputs": {
+        "zip": "exports/localization-mvp/2025-10-17T05-31-40-127Z/localized-page.zip",
+        "manifest": "exports/localization-mvp/2025-10-17T05-31-40-127Z/manifest.json",
+        "rationale": "exports/localization-mvp/2025-10-17T05-31-40-127Z/rationale.md"
+      }
+    },
+    {
+      "name": "compliance",
+      "kind": "audit",
+      "implementation": "static-doc/v1",
+      "outputs": {
+        "doc": "docs/localization/compliance.md",
+        "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/compliance-check.log"
+      }
+    },
+    {
+      "name": "guardrails",
+      "kind": "verification",
+      "implementation": "node-runner/v1",
+      "outputs": {
+        "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/manifest.json",
+        "specGuardLog": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/spec-guard.log",
+        "lintLog": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/lint.log",
+        "evalLog": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/eval-test.log"
+      }
+    },
+    {
+      "name": "approval",
+      "kind": "sign-off",
+      "implementation": "markdown-record/v1",
+      "outputs": {
+        "doc": "docs/localization/approvals/2025-10-17T05-31-40-127Z.md"
+      }
+    }
+  ],
+  "summaries": {
+    "copy": {
+      "totals": {
+        "total": 15,
+        "changed": 10,
+        "requiresReview": 0
+      },
+      "locales": [
+        {
+          "locale": "en-US",
+          "totals": {
+            "total": 5,
+            "changed": 0,
+            "unchanged": 5,
+            "requiresHumanReview": 0
+          }
+        },
+        {
+          "locale": "en-GB",
+          "totals": {
+            "total": 5,
+            "changed": 5,
+            "unchanged": 0,
+            "requiresHumanReview": 0
+          }
+        },
+        {
+          "locale": "ja",
+          "totals": {
+            "total": 5,
+            "changed": 5,
+            "unchanged": 0,
+            "requiresHumanReview": 0
+          }
+        }
+      ]
+    },
+    "media": {
+      "totals": {
+        "total": 4,
+        "requiresReview": 0
+      },
+      "locales": [
+        {
+          "locale": "en-GB",
+          "totals": {
+            "total": 2,
+            "requiresHumanReview": 0
+          }
+        },
+        {
+          "locale": "ja",
+          "totals": {
+            "total": 2,
+            "requiresHumanReview": 0
+          }
+        }
+      ]
+    },
+    "ux": {
+      "totals": {
+        "total": 4,
+        "requiresReview": 0
+      },
+      "locales": [
+        {
+          "locale": "en-GB",
+          "totals": {
+            "total": 2,
+            "requiresHumanReview": 0
+          }
+        },
+        {
+          "locale": "ja",
+          "totals": {
+            "total": 2,
+            "requiresHumanReview": 0
+          }
+        }
+      ]
+    },
+    "guardrails": {
+      "taskId": "0002",
+      "recordedAt": "2025-10-17T05:31:42.842Z",
+      "logs": {
+        "specGuard": {
+          "exitCode": 0,
+          "log": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/spec-guard.log"
+        },
+        "lint": {
+          "exitCode": 0,
+          "log": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/lint.log"
+        },
+        "evalTest": {
+          "exitCode": 0,
+          "log": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/eval-test.log"
+        }
+      }
+    },
+    "export": {
+      "bundle": "exports/localization-mvp/2025-10-17T05-31-40-127Z/localized-page.zip",
+      "pendingReview": {
+        "copy": 0,
+        "media": 0,
+        "ux": 0
+      }
+    }
+  },
+  "artifacts": {
+    "ingestion": {
+      "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/ingestion/manifest.json",
+      "screenshot": ".runs/0002/2025-10-17T05-31-40-127Z/ingestion/base.png",
+      "domSnapshot": ".runs/0002/2025-10-17T05-31-40-127Z/ingestion/dom.html"
+    },
+    "research": {
+      "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/agents/research-manifest.json",
+      "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/research.log"
+    },
+    "copy": {
+      "output": ".runs/0002/2025-10-17T05-31-40-127Z/agents/copy.json",
+      "evaluationLog": ".runs/0002/2025-10-17T05-31-40-127Z/agents/copy-eval.log",
+      "regressionLog": ".runs/0002/2025-10-17T05-31-40-127Z/regression/copy-diff.log"
+    },
+    "media": {
+      "output": ".runs/0002/2025-10-17T05-31-40-127Z/agents/media.json",
+      "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/media.log"
+    },
+    "ux": {
+      "output": ".runs/0002/2025-10-17T05-31-40-127Z/agents/ux.json",
+      "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/ux.log"
+    },
+    "changelog": {
+      "yaml": "tmp/localization-mvp/2025-10-17T05-31-40-127Z/changelog.yaml",
+      "manifest": "tmp/localization-mvp/2025-10-17T05-31-40-127Z/manifest.json",
+      "uiLog": ".runs/0002/2025-10-17T05-31-40-127Z/ui/changelog-verification.log"
+    },
+    "preview": {
+      "video": "tmp/previews/localization-mvp/2025-10-17T05-31-40-127Z/canvas-review.mp4",
+      "metadata": "tmp/previews/localization-mvp/2025-10-17T05-31-40-127Z/metadata.json",
+      "notes": "tmp/previews/localization-mvp/2025-10-17T05-31-40-127Z/notes.txt"
+    },
+    "exportBundle": {
+      "zip": "exports/localization-mvp/2025-10-17T05-31-40-127Z/localized-page.zip",
+      "manifest": "exports/localization-mvp/2025-10-17T05-31-40-127Z/manifest.json",
+      "rationale": "exports/localization-mvp/2025-10-17T05-31-40-127Z/rationale.md"
+    },
+    "compliance": {
+      "doc": "docs/localization/compliance.md",
+      "log": ".runs/0002/2025-10-17T05-31-40-127Z/agents/compliance-check.log",
+      "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/agents/compliance-manifest.json"
+    },
+    "guardrails": {
+      "manifest": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/manifest.json",
+      "specGuard": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/spec-guard.log",
+      "lint": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/lint.log",
+      "evalTest": ".runs/0002/2025-10-17T05-31-40-127Z/guardrails/eval-test.log"
+    },
+    "approval": {
+      "doc": "docs/localization/approvals/2025-10-17T05-31-40-127Z.md"
+    },
+    "phaseManifest": ".runs/0002/2025-10-17T05-31-40-127Z/phase-2-manifest.json",
+    "phaseSummary": ".runs/0002/2025-10-17T05-31-40-127Z/phase-2/summary.json",
+    "reviewLog": ".runs/0002/2025-10-17T05-31-40-127Z/phase-2-review.log"
+  }
+}
