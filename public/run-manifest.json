@@ -9,6 +9,7 @@
   },
   "ingestionDom": "snapshots/baseline/index.html",
   "localizedDom": {
+    "en-US": "localized/en-US/index.html",
     "en-GB": "localized/en-GB/index.html",
     "ja": "localized/ja/index.html"
   },
