@@ -9,14 +9,20 @@ if [[ ! -f "$INDEX_FILE" ]]; then
   exit 1
 fi
 
-python3 <<'PYTHON'
+SPEC_GUARD_ROOT="$ROOT_DIR" python3 <<'PYTHON'
 import json
 import sys
 import datetime
 import re
+import os
 from pathlib import Path
 
-root = Path(__file__).resolve().parent.parent
+root_env = os.environ.get("SPEC_GUARD_ROOT")
+if root_env:
+    root = Path(root_env)
+else:
+    root = Path(__file__).resolve().parent.parent
+
 index_path = root / "tasks" / "index.json"
 
 try:

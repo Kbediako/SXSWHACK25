@@ -3,9 +3,9 @@
     {
       "id": "0001",
       "slug": "sxswhack25",
-      "prd": "",
-      "tasks": "",
-      "status": "planned"
+      "prd": "tasks/0001-prd-sxswhack25.md",
+      "tasks": "tasks/tasks-0001-sxswhack25.md",
+      "status": "in-progress"
     }
   ],
   "specs": []

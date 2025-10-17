@@ -1,0 +1,5 @@
+
+> sxswhack25@0.1.0 eval:test
+> node -e "console.log('eval:test placeholder: add evaluation harness once defined')"
+
+eval:test placeholder: add evaluation harness once defined
