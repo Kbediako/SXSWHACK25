@@ -7,14 +7,13 @@ type ChatInputBoxProps = {
 };
 
 const ChatInputBox: React.FC<ChatInputBoxProps> = ({ onSendMessage }) => {
-  const [searchText, setSearchText] = useState("");
-
   const [message, setMessage] = useState("");
   const [attachments, setAttachments] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSend = () => {
-    if (message.trim() || attachments.length > 0) {
+    const stringMessage = message.trim();
+    if (stringMessage.length > 0 || attachments.length > 0) {
       onSendMessage(message, attachments);
       setMessage("");
       setAttachments([]);
@@ -23,9 +22,8 @@ const ChatInputBox: React.FC<ChatInputBoxProps> = ({ onSendMessage }) => {
 
   const handleKeyPress = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
-      console.log("sent");
-      handleSend();
       e.preventDefault();
+      handleSend();
     }
   };
 
@@ -70,9 +68,9 @@ const ChatInputBox: React.FC<ChatInputBoxProps> = ({ onSendMessage }) => {
             fullWidth
             multiline
             placeholder="Ask anything"
-            value={searchText}
+            value={message}
             onKeyDown={handleKeyPress}
-            onChange={(e) => setSearchText(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
             variant="standard"
             InputProps={{
               disableUnderline: true,
