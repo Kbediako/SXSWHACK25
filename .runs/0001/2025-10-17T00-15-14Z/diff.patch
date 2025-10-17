@@ -1,0 +1,73 @@
+diff --git a/docs/PRD.md b/docs/PRD.md
+index aa45271..af59d45 100644
+--- a/docs/PRD.md
++++ b/docs/PRD.md
+@@ -1,9 +1,17 @@
+-# PRD — Derived Snapshot
++# PRD — Codex Orchestrator Bootstrap (Mirror)
+ 
+-> **Source of truth:** No canonical PRD yet in /tasks
+-> This file is a human-friendly mirror. When the PRD in `/tasks` changes, update this snapshot.
++> **Source of truth:** `tasks/0001-prd-sxswhack25.md`  
++> **Last mirrored:** 2025-10-17 — see `.runs/0001/2025-10-17T00-15-14Z/manifest.json`
+ 
+-## How to Use
+-- Draft the canonical PRD under `/tasks` using `.agent/task/templates/prd-template.md` and guidance in `/.ai-dev-tasks/create-prd.md`.
+-- Once approved, mirror substantive updates here with a timestamped note.
+-- Keep this snapshot aligned with the canonical `/tasks` artifact before sharing broadly.
++## Summary
++- Establish deterministic Codex MCP workflow for SXSWHACK25.
++- Capture guardrail logs (`spec-guard`, lint, eval) with manifest evidence.
++
++## Goals
++- Reuse orchestrator checkout at `/Users/asabeko/Documents/Code/CO`.
++- Anchor MCP server to `/Users/asabeko/Documents/Code/SXSWHACK25`.
++- Keep `/tasks` and `.runs` artifacts in sync for review.
++
++## Notes
++- Guardrail commands and MCP session metadata live in `.runs/`.
++- Update mirror notes when canonical PRD changes.
+diff --git a/scripts/spec-guard.sh b/scripts/spec-guard.sh
+index d70bfd3..3270730 100755
+--- a/scripts/spec-guard.sh
++++ b/scripts/spec-guard.sh
+@@ -9,14 +9,20 @@ if [[ ! -f "$INDEX_FILE" ]]; then
+   exit 1
+ fi
+ 
+-python3 <<'PYTHON'
++SPEC_GUARD_ROOT="$ROOT_DIR" python3 <<'PYTHON'
+ import json
+ import sys
+ import datetime
+ import re
++import os
+ from pathlib import Path
+ 
+-root = Path(__file__).resolve().parent.parent
++root_env = os.environ.get("SPEC_GUARD_ROOT")
++if root_env:
++    root = Path(root_env)
++else:
++    root = Path(__file__).resolve().parent.parent
++
+ index_path = root / "tasks" / "index.json"
+ 
+ try:
+diff --git a/tasks/index.json b/tasks/index.json
+index bff0171..6c224a9 100644
+--- a/tasks/index.json
++++ b/tasks/index.json
+@@ -3,9 +3,9 @@
+     {
+       "id": "0001",
+       "slug": "sxswhack25",
+-      "prd": "",
+-      "tasks": "",
+-      "status": "planned"
++      "prd": "tasks/0001-prd-sxswhack25.md",
++      "tasks": "tasks/tasks-0001-sxswhack25.md",
++      "status": "in-progress"
+     }
+   ],
+   "specs": []

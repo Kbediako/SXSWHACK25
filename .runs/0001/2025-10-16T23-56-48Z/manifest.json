@@ -1,0 +1,66 @@
+{
+  "task_id": "0001",
+  "slug": "sxswhack25",
+  "mode": "mcp",
+  "started_at": "2025-10-16T23-56-48Z",
+  "commands": [
+    {
+      "name": "spec-guard dry run (orchestrator)",
+      "command": "bash scripts/spec-guard.sh --dry-run",
+      "cwd": "/Users/asabeko/Documents/Code/CO",
+      "status": "passed",
+      "exit_code": 0,
+      "log": ".runs/0001/2025-10-16T23-56-48Z/guardrail-dry-run.log",
+      "timestamp": "2025-10-16T23:57:10Z"
+    },
+    {
+      "name": "spec-guard dry run (target repo)",
+      "command": "bash scripts/spec-guard.sh --dry-run",
+      "cwd": "/Users/asabeko/Documents/Code/SXSWHACK25",
+      "status": "passed",
+      "exit_code": 0,
+      "log": ".runs/0001/2025-10-16T23-56-48Z/spec-guard-dry-run.log",
+      "timestamp": "2025-10-16T23:58:45Z"
+    },
+    {
+      "name": "npm run lint",
+      "command": "npm run lint",
+      "cwd": "/Users/asabeko/Documents/Code/SXSWHACK25",
+      "status": "failed",
+      "exit_code": 254,
+      "log": ".runs/0001/2025-10-16T23-56-48Z/npm-run-lint.log",
+      "timestamp": "2025-10-16T23:59:02Z",
+      "notes": "package.json missing"
+    },
+    {
+      "name": "npm run eval:test",
+      "command": "npm run eval:test",
+      "cwd": "/Users/asabeko/Documents/Code/SXSWHACK25",
+      "status": "failed",
+      "exit_code": 254,
+      "log": ".runs/0001/2025-10-16T23-56-48Z/npm-run-eval-test.log",
+      "timestamp": "2025-10-16T23:59:11Z",
+      "notes": "package.json missing"
+    }
+  ],
+  "artifacts": [
+    {
+      "type": "diff",
+      "path": ".runs/0001/2025-10-16T23-56-48Z/diff.patch",
+      "description": "Working tree diff after orchestrator bootstrap"
+    },
+    {
+      "type": "manifest",
+      "path": ".runs/local-mcp/2025-10-16T23-47-59Z/manifest.json",
+      "description": "Deterministic MCP session manifest"
+    },
+    {
+      "type": "logs",
+      "path": ".runs/0001/2025-10-16T23-56-48Z",
+      "description": "Command logs for guardrail validations"
+    }
+  ],
+  "finished_at": "2025-10-17T00:01:35Z",
+  "summary": "Superseded by 2025-10-17T00-15-14Z run after npm placeholders added",
+  "status": "superseded"
+}

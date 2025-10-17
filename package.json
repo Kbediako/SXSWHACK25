@@ -1,0 +1,11 @@
+{
+  "name": "sxswhack25",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "Bootstrap scaffolding for Codex-orchestrated workflows.",
+  "scripts": {
+    "lint": "node -e \"console.log('lint placeholder: add tooling once code exists')\"",
+    "eval:test": "node -e \"console.log('eval:test placeholder: add evaluation harness once defined')\""
+  }
+}

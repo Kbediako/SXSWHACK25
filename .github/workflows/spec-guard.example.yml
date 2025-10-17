@@ -1,0 +1,19 @@
+# Example workflow; uncomment and rename to enable
+name: Spec Guard
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+jobs:
+  spec-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run spec guard
+        run: bash scripts/spec-guard.sh
