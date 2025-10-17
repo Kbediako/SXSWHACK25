@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SearchInterface from './components/chatInputBox';
+import { ChatInterface } from './components/chatInterface/chatInterface';
 
 function App() {
   return (
     <div className="App">
-<SearchInterface />
+<ChatInterface />
     </div>
   );
 }

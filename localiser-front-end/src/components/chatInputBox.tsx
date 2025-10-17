@@ -15,7 +15,11 @@ import {
   Mic
 } from '@mui/icons-material';
 
-const SearchInterface: React.FC = () => {
+type ChatInputBoxProps = {
+  onSendMessage: (searchText: string, attachments: File[]) => void;
+}
+
+const ChatInputBox: React.FC<ChatInputBoxProps> = ({onSendMessage}) => {
   const [searchText, setSearchText] = useState('');
 
   return (
@@ -167,4 +171,4 @@ const SearchInterface: React.FC = () => {
   );
 };
 
-export default SearchInterface;
+export default ChatInputBox;
