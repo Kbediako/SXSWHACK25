@@ -1,0 +1,339 @@
+task_id: '0002'
+run_id: 2025-10-17T05-31-40-127Z
+recorded_at: '2025-10-17T05:45:23.050Z'
+baseline_locale: en-US
+reviewer:
+  id: rev-internal
+  name: Internal Localisation QA
+totals:
+  copy:
+    accepted: 10
+    pending: 0
+  media:
+    accepted: 4
+    pending: 0
+  ux:
+    accepted: 4
+    pending: 0
+items:
+  - id: copy-hero-headline-en-US
+    type: copy
+    locale: en-US
+    selector: header h1
+    status: baseline
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Baseline hero message retained for U.S. audiences.
+    proposed_text: Launch Every Locale with Confidence
+    baseline_text: Launch Every Locale with Confidence
+    requires_human_review: false
+    compliance_notes:
+      - No region-specific disclaimers required in hero headline.
+  - id: copy-hero-subhead-en-US
+    type: copy
+    locale: en-US
+    selector: header p
+    status: baseline
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Baseline positioning statement for U.S. audiences.
+    proposed_text: >-
+      StitchFlow orchestrates translation, copy, and UX updates across regions so your team can preview, approve, and
+      ship localized web experiences in record time.
+    baseline_text: >-
+      StitchFlow orchestrates translation, copy, and UX updates across regions so your team can preview, approve, and
+      ship localized web experiences in record time.
+    requires_human_review: false
+    compliance_notes:
+      - References localisation velocity benefits without quantitative promises.
+  - id: copy-ops-paragraph-en-US
+    type: copy
+    locale: en-US
+    selector: section[aria-labelledby="ops"] p
+    status: baseline
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Baseline narrative on localisation complexity for U.S. teams.
+    proposed_text: >-
+      Localizing digital journeys is more than translation—teams need alignment on tone, imagery, accessibility, and
+      regional compliance. StitchFlow threads each workflow together with human-in-the-loop checkpoints and granular
+      change logs.
+    baseline_text: >-
+      Localizing digital journeys is more than translation—teams need alignment on tone, imagery, accessibility, and
+      regional compliance. StitchFlow threads each workflow together with human-in-the-loop checkpoints and granular
+      change logs.
+    requires_human_review: false
+    compliance_notes:
+      - Highlights accessibility expectations (Section 508) noted in locale brief.
+  - id: copy-cta-paragraph-en-US
+    type: copy
+    locale: en-US
+    selector: section[aria-labelledby="cta"] p
+    status: baseline
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Baseline CTA copy supporting demo request.
+    proposed_text: Request a tailored walkthrough for your localization program.
+    baseline_text: Request a tailored walkthrough for your localization program.
+    requires_human_review: false
+    compliance_notes:
+      - Uses “program” to match U.S. spelling norms.
+  - id: copy-cta-button-en-US
+    type: copy
+    locale: en-US
+    selector: section[aria-labelledby="cta"] button
+    status: baseline
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Baseline button label encouraging demo request.
+    proposed_text: Request localized demo
+    baseline_text: Request localized demo
+    requires_human_review: false
+    compliance_notes:
+      - Button label aligns with baseline product messaging.
+  - id: copy-hero-headline-en-GB
+    type: copy
+    locale: en-GB
+    selector: header h1
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Emphasises multi-market readiness and keeps tone confident while aligning with UK marketing language preferences.
+    proposed_text: Launch Every Market with Confidence
+    baseline_text: Launch Every Locale with Confidence
+    requires_human_review: false
+    compliance_notes:
+      - Aligns with Equality Act guidance by focusing on inclusive language.
+  - id: copy-hero-subhead-en-GB
+    type: copy
+    locale: en-GB
+    selector: header p
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Uses British spellings and directly addresses programme delivery expectations common in UK organisations.
+    proposed_text: >-
+      StitchFlow orchestrates translation, copy, and UX updates across regions so your team can preview, approve, and
+      ship localised web experiences without slowing delivery programmes.
+    baseline_text: >-
+      StitchFlow orchestrates translation, copy, and UX updates across regions so your team can preview, approve, and
+      ship localized web experiences in record time.
+    requires_human_review: false
+    compliance_notes:
+      - Mentions delivery programmes—a key procurement consideration noted in locale brief.
+  - id: copy-ops-paragraph-en-GB
+    type: copy
+    locale: en-GB
+    selector: section[aria-labelledby="ops"] p
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Switches to British spelling and explicitly nods to UK governance expectations surfaced in the brief.
+    proposed_text: >-
+      Localising digital journeys is more than translation—teams need alignment on tone, imagery, accessibility, and
+      regional compliance. StitchFlow threads each workflow together with human-in-the-loop checkpoints and granular
+      change logs tailored for UK governance.
+    baseline_text: >-
+      Localizing digital journeys is more than translation—teams need alignment on tone, imagery, accessibility, and
+      regional compliance. StitchFlow threads each workflow together with human-in-the-loop checkpoints and granular
+      change logs.
+    requires_human_review: false
+    compliance_notes:
+      - References governance without naming specific regulations, avoiding legal overreach.
+  - id: copy-cta-paragraph-en-GB
+    type: copy
+    locale: en-GB
+    selector: section[aria-labelledby="cta"] p
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Adapts to UK spelling and references “programme” to match procurement language.
+    proposed_text: Request a tailored walkthrough for your localisation programme.
+    baseline_text: Request a tailored walkthrough for your localization program.
+    requires_human_review: false
+    compliance_notes:
+      - Keeps call-to-action compliant with UK marketing standards (CAP Code).
+  - id: copy-cta-button-en-GB
+    type: copy
+    locale: en-GB
+    selector: section[aria-labelledby="cta"] button
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    rationale: Switches to UK-preferred verb (“Book”) and British spelling for localisation.
+    proposed_text: Book a localisation walkthrough
+    baseline_text: Request localized demo
+    requires_human_review: false
+    compliance_notes:
+      - Encourages booking language common in UK marketing flows.
+  - id: copy-hero-headline-ja
+    type: copy
+    locale: ja
+    selector: header h1
+    status: accepted
+    decided_at: '2025-10-17T05:45:23.050Z'
+    reviewer_id: rev-internal
+    rationale: Provides an encouraging call-to-action in polite Japanese, emphasising partnership and momentum.
+    proposed_text: すべての市場を自信を持ってローンチしましょう
+    baseline_text: Launch Every Locale with Confidence
+    requires_human_review: true
+    compliance_notes:
+      - Avoids specific performance claims to remain conservative for Japanese regulations.
+  - id: copy-hero-subhead-ja
+    type: copy
+    locale: ja
+    selector: header p
+    status: accepted
+    decided_at: '2025-10-17T05:45:23.050Z'
+    reviewer_id: rev-internal
+    rationale: Explains the orchestrated workflow in formal Japanese (丁寧語) while highlighting shared review visibility.
+    proposed_text: StitchFlowは翻訳、コピー、UXの更新を一つのワークフローにまとめ、チームがキャンバス上でレビューして承認し、迅速にローカライズ版をリリースできるよう支援します。
+    baseline_text: >-
+      StitchFlow orchestrates translation, copy, and UX updates across regions so your team can preview, approve, and
+      ship localized web experiences in record time.
+    requires_human_review: true
+    compliance_notes:
+      - Keeps claims qualitative to respect APPI advertising guidance.
+  - id: copy-ops-paragraph-ja
+    type: copy
+    locale: ja
+    selector: section[aria-labelledby="ops"] p
+    status: accepted
+    decided_at: '2025-10-17T05:45:23.050Z'
+    reviewer_id: rev-internal
+    rationale: Provides a succinct explanation aligned to Japanese consensus-building norms and highlights auditability.
+    proposed_text: >-
+      デジタル体験のローカライズは単なる翻訳ではありません。トーンやビジュアル、アクセシビリティ、地域のコンプライアンスまで整合させる必要があります。StitchFlowは各ワークフローをヒューマンチェックと詳細なチェンジログでつなげます。
+    baseline_text: >-
+      Localizing digital journeys is more than translation—teams need alignment on tone, imagery, accessibility, and
+      regional compliance. StitchFlow threads each workflow together with human-in-the-loop checkpoints and granular
+      change logs.
+    requires_human_review: true
+    compliance_notes:
+      - Mentionsコンプライアンス (compliance) consistent with brief guidance from METI and APPI.
+  - id: copy-cta-paragraph-ja
+    type: copy
+    locale: ja
+    selector: section[aria-labelledby="cta"] p
+    status: accepted
+    decided_at: '2025-10-17T05:45:23.050Z'
+    reviewer_id: rev-internal
+    rationale: Uses polite request language and emphasises tailoring to the customer’s localisation framework.
+    proposed_text: 貴社のローカライゼーション計画に合わせたウォークスルーをご依頼ください。
+    baseline_text: Request a tailored walkthrough for your localization program.
+    requires_human_review: true
+    compliance_notes:
+      - Formality level aligns with expectations for B2B marketing content in Japan.
+  - id: copy-cta-button-ja
+    type: copy
+    locale: ja
+    selector: section[aria-labelledby="cta"] button
+    status: accepted
+    decided_at: '2025-10-17T05:45:23.050Z'
+    reviewer_id: rev-internal
+    rationale: Direct imperative phrasing commonly used in Japanese enterprise CTAs.
+    proposed_text: ローカライズ済みデモを依頼
+    baseline_text: Request localized demo
+    requires_human_review: true
+    compliance_notes:
+      - Avoids guarantee phrasing, consistent with APPI marketing guidance.
+  - id: media-hero-imagery-en-GB
+    type: media
+    locale: en-GB
+    slot: hero
+    status: accepted
+    decided_at: '2025-10-17T05:45:23.050Z'
+    reviewer_id: rev-internal
+    action: swap_image
+    asset_suggestion: assets/en-GB/hero-team-collaboration.jpg
+    alt_text: Product marketing and localisation managers reviewing content in a London meeting space.
+    rationale: Showcases an EMEA team in a London setting to reinforce regional relevance and inclusivity.
+    requires_human_review: true
+    notes:
+      - Source imagery with visible accessibility accommodations (step-free space) per Equality Act guidance.
+  - id: media-metrics-overlay-en-GB
+    type: media
+    locale: en-GB
+    slot: metrics
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    action: adjust_graphics
+    asset_suggestion: assets/en-GB/metrics-overlay.svg
+    alt_text: Icons highlighting faster delivery programmes and governance confidence for UK stakeholders.
+    rationale: Reinforces programme governance benefits surfaced in the UK locale brief and supports ESG messaging.
+    requires_human_review: false
+    notes:
+      - Overlay copy should use “programme” and “per cent” to reflect GOV.UK style conventions.
+  - id: media-hero-imagery-ja
+    type: media
+    locale: ja
+    slot: hero
+    status: accepted
+    decided_at: '2025-10-17T05:45:23.050Z'
+    reviewer_id: rev-internal
+    action: swap_image
+    asset_suggestion: assets/ja/hero-enterprise-team.jpg
+    alt_text: 日本のエンタープライズチームがローカライズされたキャンバスをレビューしている様子。
+    rationale: Depicts a Japanese enterprise workspace to build trust and highlight local support availability.
+    requires_human_review: true
+    notes:
+      - Confirm photography usage rights for the Japanese market.
+  - id: media-compliance-badge-ja
+    type: media
+    locale: ja
+    slot: footer
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    action: add_badge
+    asset_suggestion: assets/ja/appi-compliance-badge.svg
+    alt_text: APPI準拠を示すバッジ。
+    rationale: Surfaces APPI compliance reassurance in the footer to address regulatory expectations identified in the brief.
+    requires_human_review: false
+    notes:
+      - Coordinate with legal for final badge copy before launch.
+  - id: ux-metric-units-en-GB
+    type: ux
+    locale: en-GB
+    selector: .metric-card strong
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    recommendation: Show metric conversions alongside percentage deltas (e.g., “↓ 48% (11 days faster on average)”).
+    rationale: Provides concrete delivery impact and supports procurement expectations for quantified benefits.
+    accessibility_impact: Improves comprehension for decision-makers comparing delivery timelines.
+    requires_human_review: false
+  - id: ux-cta-spacing-en-GB
+    type: ux
+    locale: en-GB
+    selector: section[aria-labelledby="cta"] .cta
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    recommendation: Increase top padding to 56px to separate CTA from ordered list when viewed on tablet breakpoints.
+    rationale: Reduces cognitive load and prevents CTA from feeling visually merged with preceding list content.
+    accessibility_impact: Enhances focus order clarity for keyboard navigation.
+    requires_human_review: false
+  - id: ux-typography-line-height-ja
+    type: ux
+    locale: ja
+    selector: body
+    status: accepted
+    decided_at: '2025-10-17T05:31:42.599Z'
+    reviewer_id: rev-internal
+    recommendation: Increase base line-height to 1.7 when rendering Japanese copy.
+    rationale: Japanese scripts benefit from additional vertical rhythm to maintain readability at paragraph scale.
+    accessibility_impact: Supports WCAG 1.4.8 for readability in multi-script layouts.
+    requires_human_review: false
+  - id: ux-font-stack-ja
+    type: ux
+    locale: ja
+    selector: body
+    status: accepted
+    decided_at: '2025-10-17T05:45:23.050Z'
+    reviewer_id: rev-internal
+    recommendation: 'Inject locale-aware font stack: "Noto Sans JP", "Hiragino Kaku Gothic ProN", system sans-serif.'
+    rationale: Ensures glyph coverage for kana/kanji and aligns with expectations for enterprise UI typography.
+    accessibility_impact: Prevents fallback to serif fonts that can hinder legibility.
+    requires_human_review: true

@@ -1,0 +1,19 @@
+spec:
+  - id: spec-guard
+    label: Spec Guard
+    status: pass
+    details: >-
+      Exit code 0; see
+      .runs/0002/2025-10-17T05-31-40-127Z/guardrails/spec-guard.log
+lint:
+  - id: lint-suite
+    label: Lint Suite
+    status: pass
+    details: Exit code 0; see .runs/0002/2025-10-17T05-31-40-127Z/guardrails/lint.log
+eval:
+  - id: eval-test
+    label: Evaluation Tests
+    status: pass
+    details: >-
+      Exit code 0; see
+      .runs/0002/2025-10-17T05-31-40-127Z/guardrails/eval-test.log

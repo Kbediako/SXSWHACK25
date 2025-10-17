@@ -1,0 +1,34 @@
+{
+  "taskId": "0002",
+  "runTimestamp": "2025-10-17T05:45:23.050Z",
+  "reviewer": {
+    "name": "Internal Localisation QA"
+  },
+  "ingestion": {
+    "screenshot": "media/ingestion-base.png"
+  },
+  "ingestionDom": "snapshots/baseline/index.html",
+  "preview": {
+    "video": "media/canvas-review.mp4"
+  },
+  "agents": {
+    "copy": {
+      "output": "agents/copy-output.json"
+    },
+    "media": {
+      "output": "agents/media-output.json"
+    },
+    "ux": {
+      "output": "agents/ux-output.json"
+    }
+  },
+  "changelog": {
+    "yaml": "changelog.yaml"
+  },
+  "guardrails": {
+    "manifest": "guardrails/manifest.yaml"
+  },
+  "exports": {
+    "stitchBundle": "exports/localized-page.zip"
+  }
+}
