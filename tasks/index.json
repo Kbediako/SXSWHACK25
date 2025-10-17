@@ -6,7 +6,21 @@
       "prd": "tasks/0001-prd-sxswhack25.md",
       "tasks": "tasks/tasks-0001-sxswhack25.md",
       "status": "in-progress"
+    },
+    {
+      "id": "0002",
+      "slug": "localization-mvp",
+      "prd": "docs/localization-mvp-prd.md",
+      "tasks": "tasks/tasks-0002-localization-mvp.md",
+      "status": "todo"
     }
   ],
-  "specs": []
+  "specs": [
+    {
+      "id": "0002",
+      "slug": "localization-mvp",
+      "path": "tasks/specs/spec-0002-localization-mvp.md",
+      "last_review": "2025-10-17"
+    }
+  ]
 }
