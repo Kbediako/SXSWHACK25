@@ -1,64 +1,69 @@
-import React, { useState } from 'react';
-import {
-  Box,
-  TextField,
-  Button,
-  Container,
-  Typography,
-  InputAdornment,
-  IconButton
-} from '@mui/material';
-import {
-  AttachFile,
-  Search,
-  MenuBook,
-  Mic
-} from '@mui/icons-material';
+import React, { ChangeEvent, useRef, useState, KeyboardEvent } from "react";
+import { Box, TextField, Container, IconButton, Typography } from "@mui/material";
+import { AttachFile, Search, MenuBook, Mic, Close } from "@mui/icons-material";
 
 type ChatInputBoxProps = {
   onSendMessage: (searchText: string, attachments: File[]) => void;
-}
+};
 
-const ChatInputBox: React.FC<ChatInputBoxProps> = ({onSendMessage}) => {
-  const [searchText, setSearchText] = useState('');
+const ChatInputBox: React.FC<ChatInputBoxProps> = ({ onSendMessage }) => {
+  const [searchText, setSearchText] = useState("");
+
+  const [message, setMessage] = useState("");
+  const [attachments, setAttachments] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleSend = () => {
+    if (message.trim() || attachments.length > 0) {
+      onSendMessage(message, attachments);
+      setMessage("");
+      setAttachments([]);
+    }
+  };
+
+  const handleKeyPress = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      console.log("sent");
+      handleSend();
+      e.preventDefault();
+    }
+  };
+
+  const handleFileSelect = (e: ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    setAttachments((prev) => [...prev, ...files]);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
+  const removeAttachment = (index: number) => {
+    setAttachments((prev) => prev.filter((_, i) => i !== index));
+  };
 
   return (
     <Box
       sx={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        bgcolor: '#f5f5f5',
-        p: 3
+        minHeight: "100vh",
+        display: "contents",
+        flexDirection: "column",
+        p: 3,
       }}
     >
       <Container maxWidth="md">
-        <Typography
-          variant="h2"
-          component="h1"
-          sx={{
-            textAlign: 'center',
-            fontWeight: 600,
-            fontSize: { xs: '2.5rem', md: '3.5rem' },
-            color: '#1a1a1a',
-            mb: 6
-          }}
-        >
-          What can I help with?
-        </Typography>
-
         <Box
           sx={{
-            bgcolor: 'white',
-            borderRadius: '28px',
-            boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+            bgcolor: "white",
+            borderRadius: "28px",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
             p: 2.5,
-            transition: 'box-shadow 0.3s ease',
-            '&:hover': {
-              boxShadow: '0 4px 20px rgba(0,0,0,0.12)'
-            }
+            transition: "box-shadow 0.3s ease",
+            borderWidth: "1px",
+            borderStyle: "solid",
+            borderColor: "pink",
+            "&:hover": {
+              boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
+            },
           }}
         >
           <TextField
@@ -66,105 +71,100 @@ const ChatInputBox: React.FC<ChatInputBoxProps> = ({onSendMessage}) => {
             multiline
             placeholder="Ask anything"
             value={searchText}
+            onKeyDown={handleKeyPress}
             onChange={(e) => setSearchText(e.target.value)}
             variant="standard"
             InputProps={{
               disableUnderline: true,
               sx: {
-                fontSize: '1.1rem',
-                color: '#666',
-                '& .MuiInputBase-input': {
-                  padding: '8px 0'
+                fontSize: "1.1rem",
+                color: "#666",
+                "& .MuiInputBase-input": {
+                  padding: "8px 0",
                 },
-                '& .MuiInputBase-input::placeholder': {
-                  color: '#999',
-                  opacity: 1
-                }
-              }
+                "& .MuiInputBase-input::placeholder": {
+                  color: "#999",
+                  opacity: 1,
+                },
+              },
             }}
           />
-
           <Box
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
               mt: 2,
-              pt: 2
+              pt: 2,
             }}
           >
-            <Box sx={{ display: 'flex', gap: 1 }}>
-              <Button
-                startIcon={<AttachFile />}
-                sx={{
-                  textTransform: 'none',
-                  color: '#1a1a1a',
-                  bgcolor: 'transparent',
-                  borderRadius: '20px',
-                  px: 2,
-                  py: 1,
-                  fontSize: '0.95rem',
-                  fontWeight: 500,
-                  '&:hover': {
-                    bgcolor: '#f5f5f5'
-                  }
-                }}
-              >
-                Attach
-              </Button>
+            <Box sx={{ display: "flex", gap: 1 }}>
+              <input
+                ref={fileInputRef}
+                type="file"
+                multiple
+                hidden
+                onChange={handleFileSelect}
+                aria-label="Attach files"
+              />
 
-              <Button
-                startIcon={<Search />}
+              <IconButton
+                onClick={() => fileInputRef.current?.click()}
                 sx={{
-                  textTransform: 'none',
-                  color: '#1a1a1a',
-                  bgcolor: 'transparent',
-                  borderRadius: '20px',
-                  px: 2,
-                  py: 1,
-                  fontSize: '0.95rem',
-                  fontWeight: 500,
-                  '&:hover': {
-                    bgcolor: '#f5f5f5'
-                  }
+                  color: "hsl(var(--muted-foreground))",
+                  "&:hover": {
+                    bgcolor: "hsl(var(--muted))",
+                    color: "hsl(var(--primary))",
+                  },
+                  transition: "var(--transition-smooth)",
                 }}
+                aria-label="Attach file"
               >
-                Search
-              </Button>
-
-              <Button
-                startIcon={<MenuBook />}
-                sx={{
-                  textTransform: 'none',
-                  color: '#1a1a1a',
-                  bgcolor: 'transparent',
-                  borderRadius: '20px',
-                  px: 2,
-                  py: 1,
-                  fontSize: '0.95rem',
-                  fontWeight: 500,
-                  '&:hover': {
-                    bgcolor: '#f5f5f5'
-                  }
-                }}
-              >
-                Study
-              </Button>
+                <AttachFile />
+              </IconButton>
             </Box>
-
             <IconButton
+              onClick={handleSend}
               sx={{
-                bgcolor: '#f5f5f5',
-                borderRadius: '12px',
+                textTransform: "none",
+                color: "#1a1a1a",
+                borderRadius: "20px",
+                bgcolor: "#f5f5f5",
+                px: 2,
+                py: 1,
                 p: 1.5,
-                '&:hover': {
-                  bgcolor: '#e8e8e8'
-                }
+                fontSize: "0.95rem",
+                fontWeight: 500,
+                "&:hover": {
+                  bgcolor: "#e8e8e8",
+                },
               }}
             >
-              <Mic sx={{ color: '#1a1a1a' }} />
+              <Search />
             </IconButton>
           </Box>
+
+          {attachments.length > 0 && (
+        <Box sx={{ mb: 2, display: "flex", flexWrap: "wrap", gap: 1 }}>
+          {attachments.map((file, index) => (
+            <IconButton
+              key={index}
+              onClick={() => removeAttachment(index)}
+              size="small"
+              sx={{
+                bgcolor: "hsl(var(--muted))",
+                color: "hsl(var(--muted-foreground))",
+                "& .MuiChip-deleteIcon": {
+                  color: "hsl(var(--muted-foreground))",
+                },
+              }}
+            >
+              <Typography variant='subtitle2'>{file.name}</Typography>
+              <Close />
+            </IconButton>
+          ))}
+        </Box>
+      )}
         </Box>
       </Container>
     </Box>

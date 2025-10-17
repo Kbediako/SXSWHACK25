@@ -1,5 +1,5 @@
 import { Box, Container, Typography, TextField, IconButton, Chip } from '@mui/material';
-import { AttachFile, Search, MenuBook, Mic } from '@mui/icons-material';
+import { AttachFile, Search, MenuBook, Mic, Close } from '@mui/icons-material';
 import { useState, KeyboardEvent, ChangeEvent, useRef } from 'react';
 
 interface WelcomeScreenProps {
@@ -34,6 +34,10 @@ export const WelcomeScreen = ({ onSendMessage }: WelcomeScreenProps) => {
     }
   };
 
+  const removeAttachment = (index: number) => {
+    setAttachments((prev) => prev.filter((_, i) => i !== index));
+  };
+
   return (
     <Box
       sx={{
@@ -65,7 +69,9 @@ export const WelcomeScreen = ({ onSendMessage }: WelcomeScreenProps) => {
             borderRadius: '24px',
             p: 2,
             boxShadow: 'var(--shadow-lg)',
-            border: '1px solid hsl(var(--border))',
+            borderWidth: "1px",
+            borderStyle: "solid",
+            borderColor: "pink",
           }}
         >
           <TextField
@@ -115,87 +121,61 @@ export const WelcomeScreen = ({ onSendMessage }: WelcomeScreenProps) => {
                 aria-label="Attach files"
               />
               
-              <Chip
-                icon={<AttachFile sx={{ fontSize: '1rem' }} />}
-                label="Attach"
+              <IconButton
                 onClick={() => fileInputRef.current?.click()}
                 sx={{
-                  bgcolor: 'transparent',
-                  color: 'hsl(var(--foreground))',
-                  border: '1px solid hsl(var(--border))',
-                  borderRadius: '12px',
-                  '&:hover': {
-                    bgcolor: 'hsl(var(--muted))',
+                  color: "hsl(var(--muted-foreground))",
+                  "&:hover": {
+                    bgcolor: "hsl(var(--muted))",
+                    color: "hsl(var(--primary))",
                   },
-                  '& .MuiChip-icon': {
-                    color: 'hsl(var(--foreground))',
-                  },
+                  transition: "var(--transition-smooth)",
                 }}
-              />
-              
-              <Chip
-                icon={<Search sx={{ fontSize: '1rem' }} />}
-                label="Search"
-                sx={{
-                  bgcolor: 'transparent',
-                  color: 'hsl(var(--foreground))',
-                  border: '1px solid hsl(var(--border))',
-                  borderRadius: '12px',
-                  '&:hover': {
-                    bgcolor: 'hsl(var(--muted))',
-                  },
-                  '& .MuiChip-icon': {
-                    color: 'hsl(var(--foreground))',
-                  },
-                }}
-              />
-              
-              <Chip
-                icon={<MenuBook sx={{ fontSize: '1rem' }} />}
-                label="Study"
-                sx={{
-                  bgcolor: 'transparent',
-                  color: 'hsl(var(--foreground))',
-                  border: '1px solid hsl(var(--border))',
-                  borderRadius: '12px',
-                  '&:hover': {
-                    bgcolor: 'hsl(var(--muted))',
-                  },
-                  '& .MuiChip-icon': {
-                    color: 'hsl(var(--foreground))',
-                  },
-                }}
-              />
+                aria-label="Attach file"
+              >
+                <AttachFile />
+              </IconButton>
             </Box>
 
             <IconButton
+              onClick={handleSend}
               sx={{
-                color: 'hsl(var(--foreground))',
-                bgcolor: 'transparent',
-                border: '1px solid hsl(var(--border))',
-                borderRadius: '12px',
-                '&:hover': {
-                  bgcolor: 'hsl(var(--muted))',
+                textTransform: "none",
+                color: "#1a1a1a",
+                borderRadius: "20px",
+                bgcolor: "#f5f5f5",
+                px: 2,
+                py: 1,
+                p: 1.5,
+                fontSize: "0.95rem",
+                fontWeight: 500,
+                "&:hover": {
+                  bgcolor: "#e8e8e8",
                 },
               }}
-              aria-label="Voice input"
             >
-              <Mic />
+              <Search />
             </IconButton>
           </Box>
 
           {attachments.length > 0 && (
             <Box sx={{ mt: 2, px: 2, display: 'flex', flexWrap: 'wrap', gap: 1 }}>
               {attachments.map((file, index) => (
-                <Chip
-                  key={index}
-                  label={file.name}
-                  size="small"
-                  sx={{
-                    bgcolor: 'hsl(var(--muted))',
-                    color: 'hsl(var(--muted-foreground))',
-                  }}
-                />
+                <IconButton
+                key={index}
+                onClick={() => removeAttachment(index)}
+                size="small"
+                sx={{
+                  bgcolor: "hsl(var(--muted))",
+                  color: "hsl(var(--muted-foreground))",
+                  "& .MuiChip-deleteIcon": {
+                    color: "hsl(var(--muted-foreground))",
+                  },
+                }}
+              >
+                <Typography variant='subtitle2'>{file.name}</Typography>
+                <Close />
+              </IconButton>
               ))}
             </Box>
           )}
