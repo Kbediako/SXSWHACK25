@@ -1,4 +1,4 @@
-import { Button, Group, Stack, Text, Title } from '@mantine/core';
+import { Badge, Button, Group, Stack, Text, Title } from '@mantine/core';
 import type { RunManifest } from '@/types/manifest';
 
 interface HeaderBarProps {
@@ -15,19 +15,48 @@ export function HeaderBar({ manifest }: HeaderBarProps) {
   const stitchHref = manifest.exports?.stitchBundle ? `/${manifest.exports.stitchBundle}` : undefined;
 
   return (
-    <Group justify="space-between" align="flex-end" p="md">
-      <Stack gap={0}>
-        <Title order={2}>Localization Orchestrator Viewer</Title>
+    <Group
+      justify="space-between"
+      align="center"
+      h="100%"
+      px="lg"
+      style={{ backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--mantine-color-dark-4)' }}
+    >
+      <Stack gap={4}>
+        <Group gap="xs" align="center">
+          <Title order={3} fw={600}>
+            Localization Orchestrator Viewer
+          </Title>
+          <Badge color="blue" variant="light" radius="sm">
+            Task&nbsp;{manifest.taskId}
+          </Badge>
+        </Group>
         <Text size="sm" c="dimmed">
-          Task {manifest.taskId} • {formattedDate} • Reviewer: {manifest.reviewer?.name ?? 'Unknown'}
+          {formattedDate} • Reviewer: {manifest.reviewer?.name ?? 'Unknown'}
         </Text>
       </Stack>
-      <Group>
-        <Button component="a" href={changeLogHref} download disabled={!changeLogHref} variant="default">
-          Open Change Log
+      <Group gap="xs">
+        <Button
+          component="a"
+          href={changeLogHref}
+          download
+          disabled={!changeLogHref}
+          variant="light"
+          color="gray"
+          radius="md"
+        >
+          Change Log
         </Button>
-        <Button component="a" href={stitchHref} download disabled={!stitchHref}>
-          Download Stitch Bundle
+        <Button
+          component="a"
+          href={stitchHref}
+          download
+          disabled={!stitchHref}
+          variant="filled"
+          color="blue"
+          radius="md"
+        >
+          Stitch Bundle
         </Button>
       </Group>
     </Group>

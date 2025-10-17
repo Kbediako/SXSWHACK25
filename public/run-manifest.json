@@ -8,6 +8,10 @@
     "screenshot": "media/ingestion-base.png"
   },
   "ingestionDom": "snapshots/baseline/index.html",
+  "localizedDom": {
+    "en-GB": "localized/en-GB/index.html",
+    "ja": "localized/ja/index.html"
+  },
   "preview": {
     "video": "media/canvas-review.mp4"
   },

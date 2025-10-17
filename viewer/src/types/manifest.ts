@@ -89,6 +89,7 @@ export interface RunManifest {
     screenshot: string;
   };
   ingestionDom: string;
+  localizedDom?: Record<string, string>;
   preview: {
     video: string;
   };

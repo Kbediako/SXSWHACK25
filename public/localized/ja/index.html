@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>StitchFlow ローカライゼーション – 日本のランディングページ</title>
+    <meta
+      name="description"
+      content="StitchFlow は日本のチームがコピー、メディア、UX 更新を調整しながらローカライズを推進するのを支援します。"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', system-ui, sans-serif;
+        line-height: 1.7;
+      }
+      body {
+        margin: 0;
+        background: #f7f8fb;
+        color: #0f172a;
+      }
+      header {
+        background: #0f172a;
+        color: #ffffff;
+        padding: 36px 0;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.3rem;
+      }
+      header p {
+        max-width: 680px;
+        margin: 18px auto 0;
+        font-size: 1.05rem;
+        color: #cbd5f5;
+      }
+      main {
+        max-width: 960px;
+        margin: 48px auto;
+        padding: 0 28px 72px;
+        background: #ffffff;
+        border-radius: 18px;
+        box-shadow: 0 12px 34px rgba(15, 23, 42, 0.12);
+      }
+      section {
+        padding: 48px 32px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      section:last-of-type {
+        border-bottom: none;
+      }
+      h2 {
+        font-size: 1.65rem;
+        margin-bottom: 18px;
+      }
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+        margin-top: 32px;
+      }
+      .metric-card {
+        background: linear-gradient(160deg, #2563eb, #4f46e5);
+        color: #f8fafc;
+        padding: 26px;
+        border-radius: 18px;
+        box-shadow: 0 10px 26px rgba(37, 99, 235, 0.35);
+      }
+      .metric-card h3 {
+        margin: 0 0 10px;
+        font-size: 1.125rem;
+        letter-spacing: 0.05em;
+      }
+      .metric-card strong {
+        display: block;
+        font-size: 1.85rem;
+        margin-bottom: 6px;
+      }
+      .cta {
+        text-align: center;
+        padding-top: 56px;
+      }
+      .cta button {
+        border: none;
+        background: #2563eb;
+        color: #ffffff;
+        font-size: 1.1rem;
+        padding: 16px 36px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .cta button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 40px rgba(37, 99, 235, 0.4);
+      }
+      footer {
+        text-align: center;
+        color: #6b7280;
+        font-size: 0.95rem;
+        padding: 28px;
+      }
+      footer a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>すべての市場を自信を持ってローンチしましょう</h1>
+      <p>
+        StitchFlowは翻訳、コピー、UXの更新を一つのワークフローにまとめ、チームがキャンバス上でレビューして承認し、迅速にローカライズ版をリリースできるよう支援します。
+      </p>
+    </header>
+    <main>
+      <section aria-labelledby="ops">
+        <h2 id="ops">日本のチームが StitchFlow を選ぶ理由</h2>
+        <p>
+          デジタル体験のローカライズは単なる翻訳ではありません。トーンやビジュアル、アクセシビリティ、地域のコンプライアンスまで整合させる必要があります。StitchFlowは各ワークフローをヒューマンチェックと詳細なチェンジログでつなげます。
+        </p>
+        <div class="metrics" role="list">
+          <article class="metric-card" role="listitem" aria-label="サイクルタイム短縮">
+            <h3>リリース速度</h3>
+            <strong>↓ 48% (平均11日短縮)</strong>
+            パイロット企業がローカライズ版を公開するまでの期間を短縮。
+          </article>
+          <article class="metric-card" role="listitem" aria-label="QA負荷削減">
+            <h3>QA 指摘</h3>
+            <strong>↓ 63%</strong>
+            StitchFlow のレビューゲート導入後に減少した最終 QA 課題数。
+          </article>
+          <article class="metric-card" role="listitem" aria-label="レビュー参加率向上">
+            <h3>チーム連携</h3>
+            <strong>↑ 3.1×</strong>
+            1つのキャンバスで変更をプレビューすることで関係者のレビュー参加率が向上。
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="workflow">
+        <h2 id="workflow">ローカライズ済みワークフロー</h2>
+        <ol>
+          <li>対象ページのURLを取り込み、もしくはHTMLをアップロードします。</li>
+          <li>ロケール別ブリーフとブランドガードレールをパイプラインに設定します。</li>
+          <li>AIが生成したコピー、画像差し替え、UX調整をリアルタイムのキャンバスで確認します。</li>
+          <li>エクスポート前に自動コンプライアンスチェックを実行し、すぐに出荷できるバンドルを生成します。</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="cta">
+        <div class="cta">
+          <h2 id="cta">市場に合わせた StitchFlow を体験しませんか？</h2>
+          <p>貴社のローカライゼーション計画に合わせたウォークスルーをご依頼ください。</p>
+          <button type="button" aria-label="ローカライズ済みデモを依頼">ローカライズ済みデモを依頼</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      © 2025 StitchFlow. アクセシビリティを第一に。<br />
+      <a href="mailto:hello@stitchflow.io">hello@stitchflow.io</a>
+    </footer>
+  </body>
+</html>

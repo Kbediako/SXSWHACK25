@@ -14,9 +14,9 @@ import { RecommendationTable } from '@/components/RecommendationTable';
 import { GuardrailSummary } from '@/components/GuardrailSummary';
 import { VisualPreview } from '@/components/VisualPreview';
 import { useRunData } from '@/hooks/useRunData';
-import type { RecommendationEntry } from '@/types/manifest';
+import type { RecommendationEntry, RunManifest } from '@/types/manifest';
 
-const LOCALIZED_PLACEHOLDER = '/localized/index.html';
+const PLACEHOLDER_SRC = '/localized/placeholder.html';
 
 export default function App() {
   const { data, loading, error } = useRunData();
@@ -34,6 +34,10 @@ export default function App() {
   const filteredCopy = useMemo(() => filterByLocale(data?.copy ?? [], selectedLocale), [data, selectedLocale]);
   const filteredMedia = useMemo(() => filterByLocale(data?.media ?? [], selectedLocale), [data, selectedLocale]);
   const filteredUx = useMemo(() => filterByLocale(data?.ux ?? [], selectedLocale), [data, selectedLocale]);
+  const localizedPreview = useMemo(
+    () => resolveLocalizedPreview(data?.manifest, selectedLocale),
+    [data?.manifest, selectedLocale],
+  );
 
   if (loading) {
     return (
@@ -83,11 +87,15 @@ export default function App() {
             <Tabs.Panel value="preview" mt="md">
               <VisualPreview
                 baselineSrc={`/${data.manifest.ingestionDom}`}
-                localizedSrc={LOCALIZED_PLACEHOLDER}
+                localizedSrc={localizedPreview.src}
+                locale={localizedPreview.locale}
+                localizedAvailable={localizedPreview.available}
+                emptyMessage={localizedPreview.message}
               />
               <Text size="xs" c="dimmed" mt="sm">
-                {/* TODO: Replace placeholder localized iframe source with generated localized DOM artifact. */}
-                Localized view currently points to a placeholder file. Update the manifest once localized DOM is available.
+                {localizedPreview.available
+                  ? 'Preview compares baseline DOM with the localized snapshot for the selected locale.'
+                  : localizedPreview.message}
               </Text>
             </Tabs.Panel>
 
@@ -128,4 +136,41 @@ function filterByLocale(entries: RecommendationEntry[], locale: string) {
     return entries;
   }
   return entries.filter((entry) => entry.locale === locale);
+}
+
+interface LocalizedPreviewState {
+  src: string;
+  locale?: string;
+  available: boolean;
+  message: string;
+}
+
+function resolveLocalizedPreview(manifest: RunManifest | undefined, locale: string): LocalizedPreviewState {
+  const baseMessage = 'Select a locale from the sidebar to load a localized DOM snapshot.';
+
+  if (!manifest || !locale || locale === DEFAULT_LOCALE) {
+    return {
+      src: PLACEHOLDER_SRC,
+      available: false,
+      message: baseMessage,
+    };
+  }
+
+  const mappedPath = manifest.localizedDom?.[locale];
+
+  if (mappedPath) {
+    return {
+      src: mappedPath.startsWith('/') ? mappedPath : `/${mappedPath}`,
+      locale,
+      available: true,
+      message: `Showing localized DOM snapshot configured for ${locale}.`,
+    };
+  }
+
+  return {
+    src: PLACEHOLDER_SRC,
+    locale,
+    available: false,
+    message: `No localized DOM snapshot registered for ${locale}. Add a file at localized/${locale}/index.html or update run-manifest.json to point to the correct asset.`,
+  };
 }
